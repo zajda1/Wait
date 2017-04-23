@@ -1,0 +1,5 @@
+[language]
+program=Pøipravuji spuštìní terminálu
+budeSpustenZa=Bude pøipraven za:
+nenalezen=Nebyl nalezen spouštìný program
+start=Spouštím program

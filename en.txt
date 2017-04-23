@@ -1,0 +1,5 @@
+[language]
+program=Prepare terminal start
+budeSpustenZa=Will be ready in:
+nenalezen=Program does no exist
+start=Start program
