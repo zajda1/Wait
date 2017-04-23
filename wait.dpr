@@ -1,4 +1,4 @@
-program cekej;
+program wait;
 
 uses
   Forms,

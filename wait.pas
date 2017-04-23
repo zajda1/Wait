@@ -1,4 +1,4 @@
-unit Unit1;
+unit wait;
 
 interface
 
@@ -40,7 +40,8 @@ var
   odpocet:boolean;
   logoIMG: Timage;
   jazyk:string;
-  nenalezen, start: String;
+  nenalezen: string;
+  startuji: String;
 
 implementation
 
@@ -59,7 +60,7 @@ var
   MyIniFile: TIniFile;
 begin
   konec:=false;
-  GetDir(0,adresar);
+  adresar:=ExtractFilePath(Application.ExeName);
   MyIniFile := TIniFile.Create( ChangeFileExt( Application.ExeName, '.ini' ) );
   with MyIniFile do
   begin
@@ -70,6 +71,7 @@ begin
     barva := StringToColor(ReadString('nastaveni', 'barvaPozadi', '$000000'));
     barvaPisma := StringToColor(ReadString('nastaveni', 'barvaPisma', '$ffffff'));
     logo := ReadString('nastaveni', 'logo','');
+    if ExtractFilePath(logo) = '' then logo := adresar + logo;
     odpocet := ReadBool('nastaveni', 'odpocet', true);
     jazyk := ReadString('nastaveni', 'jazyk','en');
   end;
@@ -82,6 +84,7 @@ begin
     Label1.Caption := ReadString('language', 'program',Label1.Caption);
     Label2.Caption := ReadString('language', 'budeSpustenZa',Label2.Caption);
     Nenalezen := ReadString('language', 'nenalezen','Nenalezen');
+    Startuji := ReadString('language', 'start','Nenalezen');
   end;
   MyIniFile.Free;
 
@@ -159,7 +162,7 @@ begin
   if zbyva<=0 then
   begin
     Timer1.Enabled:=false;
-    Label2.Caption:='Právì spouštím program.';
+    Label2.Caption:=Startuji;
     Label3.hide;
     form1.Repaint;
     ShellExecute(Application.Handle,'open',PChar(soubor), nil, nil, sw_shownormal);

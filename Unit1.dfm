@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 107
   BorderIcons = []
   BorderStyle = bsSingle
-  Caption = #268'ek'#225'n'#237
+  Caption = 'Wait'
   ClientHeight = 419
   ClientWidth = 814
   Color = clBlack

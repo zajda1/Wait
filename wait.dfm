@@ -3,20 +3,20 @@ object Form1: TForm1
   Top = 107
   BorderIcons = []
   BorderStyle = bsSingle
-  Caption = #268'ek'#225'n'#237
+  Caption = 'Wait'
   ClientHeight = 419
   ClientWidth = 814
-  Color = clSilver
+  Color = clBlack
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  FormStyle = fsStayOnTop
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
   OnCreate = FormCreate
+  OnDblClick = FormDblClick
   OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 13
@@ -36,9 +36,9 @@ object Form1: TForm1
   object Label2: TLabel
     Left = 8
     Top = 72
-    Width = 143
+    Width = 135
     Height = 20
-    Caption = 'bude spu'#353't'#283'n za:'
+    Caption = 'budeSpustenZa:'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clSilver
     Font.Height = -16
@@ -49,9 +49,9 @@ object Form1: TForm1
   object Label3: TLabel
     Left = 160
     Top = 72
-    Width = 77
+    Width = 11
     Height = 20
-    Caption = 'Program '
+    Caption = '0'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clSilver
     Font.Height = -16
